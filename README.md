@@ -1,6 +1,8 @@
 # ExcellaEvents
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+This project is built using [Angular 2 Firebase](https://github.com/angular/angularfire2)
+This project is built using [Angular Calendar](https://github.com/mattlewis92/angular-calendar)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

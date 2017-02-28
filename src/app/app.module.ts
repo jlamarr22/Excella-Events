@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'angular-calendar';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { UtilsModule } from './components/calendar/utils/module';
+import { CalendarComponent } from './components/calendar/calendar.component';
+
 // Must export the config
 export const firebaseConfig = {
 	apiKey: "AIzaSyADHrLkUBPIKxMfQ1k48TKfNBwKheuyhH4",
@@ -15,9 +22,14 @@ export const firebaseConfig = {
 @NgModule({
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    CommonModule,
+    FormsModule,
+    NgbModalModule.forRoot(),
+    CalendarModule.forRoot(),
+    UtilsModule
   ],
-  declarations: [ AppComponent ],
-  bootstrap: [ AppComponent ]
+  declarations: [ AppComponent, CalendarComponent ],
+  bootstrap: [ AppComponent, CalendarComponent ]
 })
 export class AppModule {}
